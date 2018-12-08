@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+
+  app:
+    container_name: vue-redtube
+    build: .
+    command: sleep infinity
+    volumes:
+      - .:/vue-redtube
+      - ./node_modules:/vue-redtube/node_modules
+    ports:
+      - 4000:4000
+      - 8080:8080
