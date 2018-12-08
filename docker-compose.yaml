@@ -4,7 +4,6 @@ services:
   app:
     container_name: vue-redtube
     build: .
-    command: sleep infinity
     volumes:
       - .:/vue-redtube
       - ./node_modules:/vue-redtube/node_modules
