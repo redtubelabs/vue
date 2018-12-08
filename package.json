@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "$(npm bin)/npm-run-all --parallel proxy vue",
+    "vue": "vue serve",
+    "proxy": "node proxy"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "npm-run-all": "^4.1.5",
+    "vue": "^2.5.18"
+  },
+  "devDependencies": {
+    "node-sass": "^4.10.0",
+    "sass-loader": "^7.1.0"
+  }
+}
