@@ -4,7 +4,7 @@
       backgroundImage: `url(${items.video.thumb})`
     }"
     class="card">
-    <span @click="$emit('play')">Play :)</span>
+    <span @click="$emit('play')">&#9654;</span>
   </div>
 </template>
 
@@ -48,9 +48,8 @@ export default {
   }
 
   > span {
-    font-size: 30px;
+    font-size: 2em;
     color: white;
-    font-weight: 700;
     cursor: pointer;
     z-index: 3;
   }
