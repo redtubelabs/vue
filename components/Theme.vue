@@ -1,14 +1,14 @@
 <template>
-  <div class="container">
+  <div class="theme">
     <button @click="toggleTheme">
-      {{ theme === 'light' ? 'Tema escuro' : 'Tema claro' }}
+      {{ theme === 'light' ? 'Dark' : 'Light' }} theme
     </button>
   </div>
 </template>
 
 <script>
   export default {
-    name: "ThemeButton",
+    name: "Theme",
     data: () => ({
       theme: 'light',
     }),
@@ -42,11 +42,39 @@
 </script>
 
 <style lang="scss" scoped>
-.container {
-  /*position: fixed;*/
-  /*top: 1rem;*/
-  /*right: 1rem;*/
+.theme {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
 
-  /*justify-self: center;*/
+  button {
+    padding: 10px;
+    outline: none;
+    font-size: 20px;
+    border-radius: 4px;
+    border: 1px solid #f4f4f4;
+    transition: all .3s ease-in;
+    background-color: white;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid #A955E2;
+    }
+  }
+}
+
+.dark-theme {
+  .theme {
+    button {
+      background-color: #2f3640;
+      border-color: lighten(#353b48, 5%);
+      color: #dcdde1;
+
+      &:hover {
+        border: 1px solid #A955E2;
+      }
+    }
+  }
 }
 </style>

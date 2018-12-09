@@ -22,11 +22,10 @@ import Wrapper from './components/Wrapper';
 import Card from './components/Card';
 import Modal from './components/Modal';
 import Embed from './components/Embed';
-import ThemeButton from './components/ThemeButton';
 
 export default {
   name: 'VueRedTube',
-  components: { Wrapper, Card, Modal, Embed, ThemeButton },
+  components: { Wrapper, Card, Modal, Embed },
   data: () => ({
     currentVideo: {},
     isModalVisible: false,
