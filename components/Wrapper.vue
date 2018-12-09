@@ -44,7 +44,6 @@ export default {
       const { data } = await HTTPClient.get('/', { params })
       this.listVideosMode = true
       this.videos = data.videos
-      this.searchWord = ''
       this.isLoading = false
     }
   }
@@ -60,7 +59,7 @@ export default {
 
 .container {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +88,22 @@ export default {
 
       &:focus {
         border: 1px solid #A955E2;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .container {
+    &--input {
+      > input {
+        background-color: #2f3640;
+        color: #dcdde1;
+        border-color: lighten(#353b48, 5%);
+
+        &:focus {
+          border: 1px solid #A955E2;
+        }
       }
     }
   }
