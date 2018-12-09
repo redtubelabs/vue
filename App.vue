@@ -9,7 +9,7 @@
       <transition-group name="list" class="list-container">
         <Card
           v-for="(video, index) in videos"
-          :key="index"
+          :key="index +'-index'"
           @play="play(video)"
           :items="video" />
       </transition-group>
