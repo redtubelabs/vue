@@ -12,6 +12,7 @@
         placeholder="search something porn..."
         class="container--input"
         type="text" />
+      <Theme />
       <Loader v-if="isLoading" />
     </div>
 
@@ -21,11 +22,12 @@
 
 <script>
 import Loader from './Loader'
+import Theme from './Theme'
 import { HTTPClient } from '../utils/request'
 
 export default {
   name: 'Wrapper',
-  components: { Loader },
+  components: { Loader, Theme },
   data: () => ({
     isLoading: false,
     searchWord: '',
@@ -44,7 +46,6 @@ export default {
       const { data } = await HTTPClient.get('/', { params })
       this.listVideosMode = true
       this.videos = data.videos
-      this.searchWord = ''
       this.isLoading = false
     }
   }
@@ -60,7 +61,7 @@ export default {
 
 .container {
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,6 +90,22 @@ export default {
 
       &:focus {
         border: 1px solid #A955E2;
+      }
+    }
+  }
+}
+
+.dark-theme {
+  .container {
+    &--input {
+      > input {
+        background-color: #2f3640;
+        color: #dcdde1;
+        border-color: lighten(#353b48, 5%);
+
+        &:focus {
+          border: 1px solid #A955E2;
+        }
       }
     }
   }

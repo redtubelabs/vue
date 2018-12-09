@@ -54,4 +54,10 @@ export default {
     z-index: 3;
   }
 }
+
+.dark-theme {
+  .card {
+    box-shadow: 0px 5px 30px #353b48;
+  }
+}
 </style>

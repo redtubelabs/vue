@@ -31,4 +31,12 @@ export default {
     padding: 5px;
   }
 }
+
+.dark-theme {
+  .modal {
+    &-body {
+      background-color: #2f3640;
+    }
+  }
+}
 </style>
