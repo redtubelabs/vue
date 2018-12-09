@@ -3,8 +3,5 @@ import App from './App'
 
 new Vue({
   el: '#app',
-  render: h => h(App),
-  components: {
-    App
-  }
+  render: h => h(App)
 })
