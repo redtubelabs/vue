@@ -16,16 +16,19 @@
     </div>
 
     <slot :videos="videos"></slot>
+
+    <ThemeButton />
   </div>
 </template>
 
 <script>
 import Loader from './Loader'
+import ThemeButton from './ThemeButton';
 import { HTTPClient } from '../utils/request'
 
 export default {
   name: 'Wrapper',
-  components: { Loader },
+  components: { Loader, ThemeButton },
   data: () => ({
     isLoading: false,
     searchWord: '',
