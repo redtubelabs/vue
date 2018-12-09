@@ -22,7 +22,7 @@
 
 <script>
 import Loader from './Loader'
-import Theme from './Theme';
+import Theme from './Theme'
 import { HTTPClient } from '../utils/request'
 
 export default {

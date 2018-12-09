@@ -18,10 +18,10 @@
 </template>
 
 <script>
-import Wrapper from './components/Wrapper';
-import Card from './components/Card';
-import Modal from './components/Modal';
-import Embed from './components/Embed';
+import Wrapper from './components/Wrapper'
+import Card from './components/Card'
+import Modal from './components/Modal'
+import Embed from './components/Embed'
 
 export default {
   name: 'VueRedTube',
