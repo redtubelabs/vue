@@ -1,12 +1,24 @@
 version: "3.5"
 services:
 
+  proxy:
+    container_name: proxy
+    build: .
+    command: ["npm", "run", "proxy"]
+    volumes:
+      - node_modules:/vue-redtube/node_modules
+    ports:
+      - 4000:4000
+
   app:
     container_name: vue-redtube
     build: .
+    command: ["vue", "serve"]
     volumes:
       - .:/vue-redtube
-      - ./node_modules:/vue-redtube/node_modules
+      - node_modules:/vue-redtube/node_modules
     ports:
-      - 4000:4000
       - 8080:8080
+
+volumes:
+  node_modules: {}
