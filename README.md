@@ -19,7 +19,23 @@
 
 ### Usage
 
+If you use docker, just go 
+
+``` sh
+$ docker build -t vue-redtube . 
+$ docker run -it -p 4000:4000 vue-redtube npm run proxy
+$ docker run -it -p 8080:8080 vue-redtube vue serve
+```
+
+If you'd rather use Docker Compose, just go
+
+``` sh
+$ docker-compose up
+```
+
+Or if you like it raw, ( ͡° ͜ʖ ͡°), just go
+
 ```sh
-npm install
-npm start
+$ npm install
+$ npm start
 ```
